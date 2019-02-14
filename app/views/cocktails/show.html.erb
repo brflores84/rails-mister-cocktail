@@ -1,0 +1,10 @@
+<div class=“container”>
+ <div class=“row”>
+   <div class=“col-md-6 col-md-offset-3”>
+     <h1><%= @cocktail.name %></h1>
+     <br>
+   <%= link_to 'Back', cocktails_path, class: 'btn btn-primary' %>
+   <%= link_to 'Add doses', new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
+   </div>
+ </div>
+</div>
