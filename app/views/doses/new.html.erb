@@ -5,7 +5,8 @@
       <%= simple_form_for [@cocktail, @dose] do |f| %>
         <%= f.input :description, label: "Decription", placeholder: "Add your description"%>
         <%= f.input :amount, label: "Fullfill your dose amout", placeholder: "8cl" %>
-        <%= f.submit "save", class: 'btn btn-success' %>
+        <%= f.association :ingredient, collection: Ingredient.all %>
+        <%= f.submit "Submit", class: 'btn btn-success' %>
       <% end %>
       </div>
   </div>
